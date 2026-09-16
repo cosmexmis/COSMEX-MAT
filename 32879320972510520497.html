@@ -22,7 +22,7 @@
 		}
 		</style>
 
-		<!-- 將全域變數與 JS 改指向本地 files/ 資料夾 -->
+		<!-- 本地 JS 檔案 -->
 		<script>
 		var STATIC_BASE = 'files/';
 		var ASSETS_BASE = 'files/';
@@ -122,8 +122,8 @@
 					<div id="text">
 						<div id="wsite-content" class="wsite-elements wsite-not-footer">
 							<div>
-								<!-- 表單改為直接郵寄至指定信箱 -->
-								<form action="mailto:morris@cosmex-mat.com" method="POST" enctype="text/plain" id="contact-form">
+								<!-- 使用 mailto + text/plain 以呼叫終端郵件軟體 -->
+								<form action="mailto:morris@cosmex-mat.com?subject=官網產品詢問" method="POST" enctype="text/plain" id="contact-form">
 									<div class="wsite-form-container" style="margin-top:10px;">
 										<ul class="formlist">
 											<h2 class="wsite-content-title" style="text-align:left;">感謝您的諮詢，我們會儘快與您聯繫!</h2>
@@ -157,7 +157,7 @@
 												<div class="wsite-form-field" style="margin:5px 0px;">
 													<label class="wsite-form-label" for="email">電子郵件 <span class="form-required">*</span></label>
 													<div class="wsite-form-input-container">
-														<input required id="email" class="wsite-form-input wsite-input wsite-input-width-370px" type="email" name="Email" />
+														<input required id="email" class="wsite-form-input wsite-input wsite-input-width-370px" type="email" name="聯絡E-mail" />
 													</div>
 												</div>
 											</div>
@@ -174,9 +174,8 @@
 									</div>
 
 									<div style="text-align:left; margin-top:15px; margin-bottom:10px;">
-										<button type="submit" class="wsite-button" style="background:none; border:none; cursor:pointer;">
-											<span class="wsite-button-inner">提交</span>
-										</button>
+										<!-- 使用原生提交按鈕以利對接 mailto 動作 -->
+										<input type="submit" value="提交" class="wsite-button" style="padding: 6px 25px; cursor: pointer; background: #016ed3; color: white; border: none; border-radius: 3px; font-weight: bold;" />
 									</div>
 								</form>
 							</div>
