@@ -159,6 +159,61 @@ h2 {
 }
 
 /* Navigation Drop-Down Menu Customization
+/*20260917add
+/* Navigation Drop-Down Menu Customization
+--------------------------------------------------------------------------------*/
+
+/* 1. 設定父層相對定位，讓子選單能準確對齊 */
+#navigation ul li {
+    position: relative;
+}
+
+/* 2. 預設隱藏下拉選單 */
+#navigation ul li ul,
+#navigation ul li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    z-index: 999;
+    background: #bad6f0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. 子選單項目直立排列 */
+#navigation ul li ul li,
+#navigation ul li .sub-menu li {
+    float: none;
+    width: 100%;
+}
+
+/* 4. 子選單連結文字樣式 */
+#navigation ul li ul li a,
+#navigation ul li .sub-menu li a {
+    float: none;
+    display: block;
+    height: auto;
+    padding: 10px 15px;
+    color: #1b4b78;
+    font-size: 13px;
+    font-weight: normal;
+    white-space: nowrap;
+    border-bottom: 1px solid #c3dbf1;
+}
+
+#navigation ul li ul li a:hover,
+#navigation ul li .sub-menu li a:hover {
+    background: #83b4e2;
+    color: #fff;
+}
+
+/* 5. 滑鼠移入時顯示下拉選單 */
+#navigation ul li:hover > ul,
+#navigation ul li:hover > .sub-menu {
+    display: block;
+}
+/*20260917END
 --------------------------------------------------------------------------------*/
 
 #wsite-menus .wsite-menu li a {

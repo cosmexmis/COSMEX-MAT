@@ -490,3 +490,47 @@ div.paragraph ul, div.paragraph ol { padding-left: 3em !important; margin: 5px 0
 div.paragraph li { padding-left: 5px !important; margin: 3px 0 0 !important; }
 div.paragraph ul, div.paragraph ul li { list-style: disc outside !important; }
 div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; }
+/* ==========================================
+   Weebly 原生下拉選單顯示修復 (Fix Dropdown Menu)
+   ========================================== */
+
+/* 1. 為每個選單項目加上相對定位基準 (修正位置跑偏) */
+#navigation ul li,
+#navigation ul li.wsite-menu-item-wrap {
+    position: relative !important;
+}
+
+/* 2. 讓子選單準確對齊於父層（產品介紹）的正下方 */
+#navigation ul li:hover > .wsite-menu-wrap {
+    display: block !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+}
+/* 3. 子選單項目改為直立排列 */
+#navigation .wsite-menu-wrap .wsite-menu li.wsite-menu-subitem-wrap {
+    float: none !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* 4. 子選單連結與文字設定 */
+#navigation .wsite-menu-wrap .wsite-menu li.wsite-menu-subitem-wrap a.wsite-menu-subitem {
+    float: none !important;
+    display: block !important;
+    height: auto !important;
+    padding: 10px 15px !important;
+    color: #1b4b78 !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    white-space: nowrap !important;
+    background: #bad6f0 !important;
+    border-bottom: 1px solid #c3dbf1 !important;
+}
+
+/* 5. 滑鼠移入子項目變色效果 */
+#navigation .wsite-menu-wrap .wsite-menu li.wsite-menu-subitem-wrap a.wsite-menu-subitem:hover {
+    background: #83b4e2 !important;
+    color: #ffffff !important;
+}
