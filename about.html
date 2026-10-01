@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 | 光曄材料 COSMEX MATERIALS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@400;600&amp;display=swap"
+
+      rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- 導覽列 -->
+    <!-- 將 about.html 的 nav 標籤替換為這段，確保底色是純白 (bg-white) -->
+    <nav class="bg-white backdrop-blur-md fixed w-full z-50 border-b border-gray-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <!-- 左側 Logo (確保這裡也已經換成 logo.jpg 且沒有藍色方塊) -->
+          <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+            <img src="files/logo.jpg" alt="COSMEX MATERIALS" class="h-10 w-auto object-contain">
+          </div>
+          <!-- 右側選單連結 -->
+          <!-- 右側選單連結 -->
+<div class="hidden md:flex items-center space-x-8"> 
+  <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">HOME</a>
+  <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">關於光曄</a> 
+  
+  <!-- ▼▼▼ 產品介紹群組與下拉選單 ▼▼▼ -->
+  <div class="relative group">
+    <!-- 主按鈕：滑鼠移上去時顯示下拉選單 -->
+    <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 py-2">
+      產品介紹
+      <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </a>
+
+    <!-- 下拉選單內容：預設隱藏 (hidden)，滑鼠移至父層 group 時顯示 (group-hover:block) -->
+    <div class="absolute top-full left-0 w-56 bg-white border border-gray-100 rounded-xl shadow-xl py-2 hidden group-hover:block transition-all z-50">
+      <a href="products.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
+        📦 產品總覽
+      </a>
+      <div class="border-t border-gray-100 my-1"></div>
+      <a href="optoelectronic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 光電材料與導電膠
+      </a>
+      <a href="ceramic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 技術陶瓷與耐火材料
+      </a>
+      <a href="magnetic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 無機金屬與氧化物粉末
+      </a>
+    </div>
+  </div>
+  <!-- ▲▲▲ 下拉選單結束 ▲▲▲ -->
+
+  <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">聯絡我們</a> 
+</div>
+      </div>
+    </nav>
+    <div class="hidden md:flex space-x-8 items-center"> <a href="about.html" class="text-blue-600 font-medium transition-colors">關
+        於光曄</a> <a href="products.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">產
+        品介紹</a> <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">聯
+        絡我們</a> <a href="#" class="px-5 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition font-medium text-sm">Request
+        Catalog</a> </div>
+    <!-- 頁首標題區 -->
+    <!-- 在這裡加上 bg-cover bg-center bg-no-repeat 與 style 背景圖片屬性 -->
+    <div class="relative pt-32 pb-16 bg-cover bg-center bg-no-repeat text-white"
+
+      style="background-image: url('files/about.jpg');">
+      <!-- 半透明深藍色遮罩層：確保底下的背景圖不會干擾文字閱讀 -->
+      <div class="absolute inset-0 bg-blue-900/10 backdrop-brightness-75"></div>
+      <!-- 文字內容區塊：必須加上 relative z-10 讓文字浮在圖片與遮罩的最上層 -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold mb-4 tracking-wide drop-shadow-md">關於光曄材料</h1>
+        <p class="text-xl text-blue-200 drop-shadow">追求環境與企業永續經營，您最值得信賴的化學原材料夥伴</p>
+      </div>
+    </div>
+    <!-- 內容區 -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">創立與願景</h2>
+          <p class="text-gray-600 mb-4 leading-relaxed"> 本公司創立於
+            2013年，專門從事化學原材料的國內外生產廠商代理、進口、經銷及現貨供應，同時提供產品的技術服務。涉獵領域包含無機材料、金屬粉末材料、光電材料及耐火材料。
+          </p>
+          <p class="text-gray-600 mb-4 leading-relaxed">
+            目前產品積極開發特殊導熱材料及設立海外分公司，以期達到「客戶至上、共創雙贏」，盡全力提供客戶迅速、完善的服務及最佳品質的產品。 </p>
+          <div class="mt-8 flex gap-4">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex-1">
+              <h4 class="font-bold text-blue-900 mb-2">SGS 檢驗認證</h4>
+              <p class="text-sm text-gray-500">產品定期送樣檢驗有害物質，符合歐盟規範。</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex-1">
+              <h4 class="font-bold text-blue-900 mb-2">全方位應用</h4>
+              <p class="text-sm text-gray-500">涵蓋電子、面板、LED、散熱與粉末冶金工業。</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-200 rounded-2xl h-96 flex items-center justify-center overflow-hidden relative shadow-inner bg-cover bg-center bg-no-repeat"
+
+          style="background-image: url('files/yearold.jpg');">
+          <!-- 示意圖替換區 -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-blue-700 opacity-10"></div>
+          <div class="relative z-10 text-white text-center p-8 ">
+            <div class="text-6xl font-bold mb-2">10+</div>
+            <div class="text-xl">年專業材料供應經驗</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+        <p>© 2026 COSMEX MATERIALS CORPORATION. 光曄材料股份有限公司 All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

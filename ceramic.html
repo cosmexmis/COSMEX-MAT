@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術陶瓷與耐火材料 | 光曄材料 COSMEX MATERIALS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', 'Noto Sans TC', sans-serif; }</style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    
+    <!-- 導覽列 -->
+    <nav class="bg-white backdrop-blur-md fixed w-full z-50 border-b border-gray-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          
+          <!-- 左側 Logo (純圖片，無藍色方塊) -->
+          <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+            <img src="files/logo.jpg" alt="COSMEX MATERIALS" class="h-10 w-auto object-contain">
+          </div>
+
+          <!-- 右側選單連結 -->
+          <!-- 右側選單連結 -->
+<div class="hidden md:flex items-center space-x-8"> 
+  <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">HOME</a>
+  <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">關於光曄</a> 
+  
+  <!-- ▼▼▼ 產品介紹群組與下拉選單 ▼▼▼ -->
+  <div class="relative group">
+    <!-- 主按鈕：滑鼠移上去時顯示下拉選單 -->
+    <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 py-2">
+      產品介紹
+      <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </a>
+
+    <!-- 下拉選單內容：預設隱藏 (hidden)，滑鼠移至父層 group 時顯示 (group-hover:block) -->
+    <div class="absolute top-full left-0 w-56 bg-white border border-gray-100 rounded-xl shadow-xl py-2 hidden group-hover:block transition-all z-50">
+      <a href="products.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
+        📦 產品總覽
+      </a>
+      <div class="border-t border-gray-100 my-1"></div>
+      <a href="optoelectronic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 光電材料與導電膠
+      </a>
+      <a href="ceramic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 技術陶瓷與耐火材料
+      </a>
+      <a href="magnetic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+        🔹 無機金屬與氧化物粉末
+      </a>
+    </div>
+  </div>
+  <!-- ▲▲▲ 下拉選單結束 ▲▲▲ -->
+
+  <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">聯絡我們</a> 
+</div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- 頁首標題區 (背景圖 + 低遮罩效果) -->
+    <div class="relative pt-32 pb-16 bg-cover bg-center bg-no-repeat text-white overflow-hidden" style="background-image: url('files/ceramic.jpg');">
+        
+      <!-- 低透明度深藍色遮罩層（55% 透明度，讓背景圖自然透出） -->
+      <div class="absolute inset-0 bg-blue-950/10 backdrop-brightness-90"></div>
+
+      <!-- 文字內容區塊 -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-blue-300 font-semibold tracking-wider text-sm mb-2 drop-shadow-md">CERAMIC & REFRACTORY MATERIALS</div>
+          <h1 class="text-4xl font-bold mb-4 tracking-wide drop-shadow-lg">技術陶瓷與耐火材料</h1>
+          <p class="text-xl text-blue-50 max-w-2xl drop-shadow-md">提供高純度氧化鋁及精密陶瓷粉末，具備極佳的耐熱衝擊性與抗腐蝕能力，滿足工業高溫製程需求。</p>
+      </div>
+    </div>
+
+    <!-- 內容區塊 -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- 產品分類與實體圖片展示區 -->
+        <div class="lg:col-span-2 space-y-8">
+          
+          <!-- 主介紹卡片 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 border-b pb-2 border-gray-100">高純度技術陶瓷與耐火材料應用</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              我們提供高純度氧化鋁、氧化鋯及各類精密陶瓷粉末與燒結製品，具備極佳的耐熱衝擊性、抗腐蝕能力與優異的電氣絕緣特性，滿足先進半導體、光電及工業高溫製程的嚴苛需求。
+            </p>
+
+            <!-- 實體圖片展示 1：精密陶瓷結構件與環狀製品 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <div class="rounded-lg overflow-hidden shadow-inner mb-3 bg-white">
+                  <img src="files/726491.png" alt="耐火與結構陶瓷製品" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-bold text-blue-900 mb-1">精密耐火與結構陶瓷環</h4>
+                <p class="text-sm text-gray-500">適用於高溫爐管、密封組件與抗蝕結構件。</p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <div class="rounded-lg overflow-hidden shadow-inner mb-3 bg-white">
+                  <img src="files/3450098_orig.jpg" alt="半導體製程陶瓷載具" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-bold text-blue-900 mb-1">半導體製程專用載具</h4>
+                <p class="text-sm text-gray-500">高潔淨度、耐化學侵蝕，符合半導體先進製程規範。</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 實體圖片展示 2：粉末顯微結構與形態 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">微觀粉末結構與規格形態</h3>
+            <p class="text-gray-600 mb-6">嚴格控管粒徑分佈與微觀結構（包含煅燒氧化鋁、球型氧化鋁與二氧化鋯等），確保客戶在成型與燒結時達到最佳良率。</p>
+            
+            <div class="rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-50 p-2">
+              <img src="files/3002263_orig.jpg" alt="氧化鋁與氧化鋯粉末顯微照" class="w-full h-auto object-contain rounded-lg">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 側邊欄：聯絡與應用領域 -->
+        <div class="space-y-6">
+          <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+            <h3 class="text-lg font-bold text-blue-900 mb-3">需要詳細規格表？</h3>
+            <p class="text-sm text-gray-600 mb-4">請聯繫我們的業務團隊，我們將為您提供完整的 TDS (技術資料表) 與 MSDS (物質安全資料表)。</p>
+            <a href="contact.html" class="block text-center w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">聯絡業務專員</a> 
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">主要應用領域</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>半導體晶圓製造設備</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>工業高溫爐管與耐火材料</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>精密結構陶瓷零件</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>LED 與光電燒結製程</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+        <p>© 2026 COSMEX MATERIALS CORPORATION. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
