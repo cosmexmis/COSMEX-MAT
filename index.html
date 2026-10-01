@@ -69,52 +69,66 @@
   <body class="text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900 flex flex-col min-h-screen">
     
     <!-- 導覽列 Navbar (純白不變灰) -->
-    <nav class="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-          
-          <!-- Logo 區塊 -->
-          <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
-            <img src="files/logo.jpg" alt="COSMEX MATERIALS" class="h-10 w-auto object-contain">
-          </div>
+    <!-- 導覽列 Navbar (含手機版漢堡選單與產品下拉) -->
+    <nav class="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- 左側 Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="files/logo.jpg" alt="COSMEX MATERIALS" class="h-10 w-auto object-contain">
+                </div>
+                
+                <!-- 桌面版選單 (手機版時隱藏) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">HOME</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">關於光曄</a>
+                    
+                    <!-- 桌面版產品下拉選單 -->
+                    <div class="relative group">
+                        <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 py-2">
+                            產品介紹
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- 下拉內容 -->
+                        <div class="absolute top-full left-0 w-56 bg-white border border-gray-100 rounded-xl shadow-xl py-2 hidden group-hover:block transition-all z-50">
+                            <a href="products.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">📦 產品總覽</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="optoelectronic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 光電材料與導電膠</a>
+                            <a href="ceramic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 技術陶瓷與耐火材料</a>
+                            <a href="magnetic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 無機金屬與氧化物粉末</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">聯絡我們</a>
+                </div>
 
-          <!-- 桌面版選單 (包含產品介紹下拉選單) -->
-          <div class="hidden md:flex items-center space-x-8"> 
-            <a href="index.html" class="text-sm font-medium text-blue-600 font-semibold transition-colors">HOME</a>
-            <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">關於光曄</a> 
-            
-            <!-- 產品介紹下拉選單 -->
-            <div class="relative group">
-              <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 py-2">
-                產品介紹
-                <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </a>
-              <div class="absolute top-full left-0 w-56 bg-white border border-gray-100 rounded-xl shadow-xl py-2 hidden group-hover:block transition-all z-50">
-                <a href="products.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">📦 產品總覽</a>
-                <div class="border-t border-gray-100 my-1"></div>
-                <a href="optoelectronic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 光電材料與導電膠</a>
-                <a href="ceramic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 技術陶瓷與耐火材料</a>
-                <a href="magnetic.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">🔹 無機金屬與氧化物粉末</a>
-              </div>
-            </div>
-
-            <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">聯絡我們</a>
-          </div>
-
-          <!-- 手機版選單按鈕 -->
-          <div class="flex md:hidden items-center">
+                <!-- 手機版漢堡按鈕 (桌面版時隱藏) -->
+                <div class="flex md:hidden items-center">
                     <!-- 點擊時透過 JS 切換 mobile-menu 的 hidden 類別 -->
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-600 hover:text-blue-600 focus:outline-none p-2">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
-            </button> 
-          </div>
-
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- 手機版下拉展開選單 (預設隱藏，點擊按鈕後顯示) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl z-50">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg">HOME</a>
+                <a href="about.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg">關於光曄</a>
+                <a href="products.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg">產品介紹</a>
+                <!-- 手機版子選單縮進顯示 -->
+                <a href="optoelectronic.html" class="block px-4 py-2 pl-8 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">- 光電材料與導電膠</a>
+                <a href="ceramic.html" class="block px-4 py-2 pl-8 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">- 技術陶瓷與耐火材料</a>
+                <a href="magnetic.html" class="block px-4 py-2 pl-8 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">- 磁性與無機金屬粉末</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg">聯絡我們</a>
+            </div>
+        </div>
     </nav>
     
     <!-- Hero 英雄區塊 -->
